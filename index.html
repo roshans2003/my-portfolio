@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshanoos Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    keyframes: {
+                        roll: {
+                            '0%': { transform: 'rotateX(45deg) rotateY(-45deg)' },
+                            '25%': { transform: 'rotateX(-45deg) rotateY(-45deg)' },
+                            '50%': { transform: 'rotateX(45deg) rotateY(45deg)' },
+                            '75%': { transform: 'rotateX(-45deg) rotateY(45deg)' },
+                            '100%': { transform: 'rotateX(45deg) rotateY(-45deg)' },
+                        }
+                    },
+                    animation: {
+                        roll: 'roll 12s infinite linear',
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        .box {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgb(255, 0, 0);
+            font-family: monospace;
+            color: rgb(255, 255, 255);
+            background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,255,216,1) 0%, rgba(75,5,111,1) 0%, rgba(119,8,59,1) 0%, rgba(11,34,99,1) 100%);
+            font-size: 0.9rem;
+            box-sizing: border-box;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#about"><button class="btnz" href="#about">My Portfolio</button></a>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">Projects & Achievements</a></li>
+                    <li><a href="#services">Lets Connect</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>🙋🏻‍♂️Hi, I'm <br><span>Muhammad Roshan </span></h1>
+                <div class="relative w-full h-screen [perspective:1000px] flex  justify-start" style="margin-left: 6%;">
+                    <div class="relative w-[185px] h-[185px] [transform-style:preserve-3d] animate-roll">
+                        <!-- Front -->
+                        <div class="box w-full h-full [transform:translateZ(75px)]">'Debugger'</div>
+                        <!-- Back -->
+                        <div class="box w-full h-full [transform:rotateY(180deg)_translateZ(75px)]"></div>
+                        <!-- Left -->
+                        <div class="box w-full h-full [transform:rotateY(-90deg)_translateZ(75px)]">'Designer'</div>
+                        <!-- Right -->
+                        <div class="box w-full h-full [transform:rotateY(90deg)_translateZ(75px)]">'Developer'</div>
+                        <!-- Top -->
+                        <div class="box w-full h-full [transform:rotateX(90deg)_translateZ(75px)]">'Data_Analyst'</div>
+                        <!-- Bottom -->
+                        <div class="box w-full h-full [transform:rotateX(-90deg)_translateZ(75px)]">'Deep_Learner'</div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1" id="imgbox">
+                    <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1725472166/B790DD15-D817-4598-8AF9-EE6E064DA996_gdnxsa.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me👨🏻‍💻</h1>
+                    <p>I am a Master of Computer Applications (MCA) student specializing in web development, UI/UX design, and machine learning. My academic and practical experiences have equipped me with a robust understanding of creating seamless and user-centric digital interfaces, underpinned by strong technical skills. I am committed to leveraging my expertise to develop innovative solutions that enhance user experiences and drive technological advancements. As I advance in my career, I am eager to contribute to forward-thinking projects that intersect design, technology, and machine learning.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills🦾</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience📎</p>
+                        <p class="tab-links" onclick="opentab('education')">Education📚</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Machine Learning</span><br>Data Analytics using Machine Learning </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>Figma</li>
+                            <li><span>Animation</span><br>Inkscape & Synfig Studio</li>
+                            <li><span>Programming Languages</span><br>C, Python, Java</li>
+                            <li><span>others</span><br>Linux, Google collab & jupyter notebook</li>
+                            <li><span>Internship</span><br>@edunnet foundation<br>(Project: NLP Based Chatbot)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>MCA</span><br>2024-2026 - Rathinam Technical Campus</li>
+                            <li><span>BCA</span><br>2021-2024 - DR.G.R.Damodaran College of Science</li>
+                            <li><span>Grade 12</span><br>2020-2021 - Devanga Higher Secondary School</li>
+                            <li><span>Grade 10</span><br>2018-2019 - Corporation High School PN Pudur</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">Projects & Achievements:</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="https://i.pinimg.com/originals/39/37/47/393747d57d29232eaa98b9ecba7c4dca.png">
+                    <div class="layer">
+                        <h3>Netflix Clone</h3>
+                        <p>Cloned site of Netflix starting page.</p>
+                        <a href="https://netflixroshans.ccbp.tech/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://i.pinimg.com/736x/13/f8/07/13f807d47cc21066076d5ab192d02e97.jpg">
+                    <div class="layer">
+                        <h3>Data Analytics</h3>
+                        <p>Data Analytics dashboard using Power BI</p>
+                        <a href="https://app.powerbi.com/links/tfiJMaBCVS?ctid=56619bca-337f-46ee-b4ac-54abfbf1b9c2&pbi_source=linkShare&bookmarkGuid=099ada64-d7bd-408e-a129-edddc2cf8310"> <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://i.pinimg.com/originals/95/9f/e6/959fe6156a7e4675f1e593747db83306.jpg">
+                    <div class="layer">
+                        <h3>Ecommerce App</h3>
+                        <p>AR and VR Embedded Web App</p>
+                        <a href="https://svsteels.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740762923/B537D1AD-B5AA-438B-A855-AB805FE44D78_cxnkdg.jpg"
+                    height="400px" width="400px"
+                    />
+                    <div class="layer">
+                        <h3>Certificates</h3>
+                        <p>Projects, Workshops and Masterclass</p>
+                        <a href="certificates.html"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#header" class="btn">Home</a>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Lets Connect 🤝🏻</h1>
+            <div class="services-list">
+                <a href="https://www.linkedin.com/in/muhammad-roshan-s">
+                <div>
+                    <i class="fas fa-code"></i>
+                    <h2 style="color: aliceblue;">Linkedin</h2>
+                    <img 
+                    src="https://img.icons8.com/?size=100&id=44019&format=png&color=000000"
+                    />
+                </div>
+                </a>
+                <a href="https://github.com/roshans2003">
+                <div>
+                    <i class="fas fa-crop-alt"></i>
+                    <h2 style="color: aliceblue;">Github</h2>
+                    <img
+                    src="https://img.icons8.com/?size=100&id=52539&format=png&color=000000"/>
+
+                </div>
+            </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact 📬</h1>
+                    <p><i class="fas fa-paper-plane"></i> smroshan.2003@gmail.com ✉️</p>
+                    <p><i class="fas fa-phone-square-alt"></i> +91 9080362735 📞</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>@roshanooos</p>
+        </div>
+    </div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu() {
+            sidemeu.style.right = "-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzMmqHrDzH0nauprMxsCrx_xtPyewGgQrpPBFI5L6VJEjXbofTHOzd8fM11kQlUvzIWKw/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+
+</html>

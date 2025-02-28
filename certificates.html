@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes shake {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(-3px, 3px); }
+            50% { transform: translate(3px, -3px); }
+            75% { transform: translate(-3px, 3px); }
+            100% { transform: translate(0, 0); }
+        }
+        .shake:hover {
+            animation: shake 0.3s ease-in-out;
+        }
+
+        #certificates{
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 48%, rgba(255, 0, 79, 1) 79%, rgba(0, 212, 255, 1) 100%);
+        }
+        .btnz {
+    margin: 10px;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+
+}
+
+.btnz:active {
+    scale: 0.92;
+}
+
+.btnz:hover {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 0, 79, 1) 35%, rgba(0, 212, 255, 1)100%);
+    color: rgb(2, 0, 36);
+}
+
+p{
+    color: rgb(0, 1, 1);
+    font-family: cursive;
+}
+
+    </style>
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+        <a href="index.html"><button class="btnz" href="#about">Back to Home</button></a>
+    </nav>
+    
+    <div id="mobile-menu" class="hidden bg-white p-4 md:hidden">
+        <a href="#certificates" class="block py-2"><h2>Certificates</h2></a>
+    </div>
+
+    <section id="certificates" class="p-10 bg-white text-center">
+        <h2 class="text-2xl font-bold" style="color: aliceblue; font-family: cursive;">Certificates And Achievements</h2>
+        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644500/PHOTO-2024-03-16-20-57-33_11_b2gqrb.jpg" alt="Certificate 1" class="w-full h-auto rounded shake">
+                <p class="mt-2">Website Builder (Professional)</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644500/PHOTO-2024-03-16-20-57-33_2_ld8vki.jpg" alt="Certificate 2" class="w-full h-auto rounded shake">
+                <p class="mt-2">Data Analytics (Workshop)</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644499/PHOTO-2024-03-16-20-57-33_5_qfxi9f.jpg" alt="Certificate 3" class="w-full h-auto rounded shake">
+                <p class="mt-2">Ethical Hacking (Workshop)</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644500/PHOTO-2024-03-16-20-57-33_9_aty90b.jpg" alt="Certificate 4" class="w-full h-auto rounded shake">
+                <p class="mt-2">MasterClass from Samsung</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644500/PHOTO-2024-03-16-20-57-33_jascou.jpg" alt="Certificate 5" class="w-full h-auto rounded shake">
+                <p class="mt-2">Software Engineering (MasterClass)</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644500/PHOTO-2024-03-16-20-57-33_7_gylrry.jpg" alt="Certificate 6" class="w-full h-auto rounded shake">
+                <p class="mt-2">Data Science (MasterClass from Paypal)</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644499/PHOTO-2024-03-16-20-57-33_10_w9d7i6.jpg" alt="Certificate 7" class="w-full h-auto rounded shake">
+                <p class="mt-2">MasterClass from Software Engineer in Google</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644499/PHOTO-2024-03-16-20-57-33_4_mkvir2.jpg" alt="Certificate 8" class="w-full h-auto rounded shake">
+                <p class="mt-2">AWS Fundamentals Masterclass</p>
+            </div>
+            <div class="p-4 shadow-md bg-gray-50 rounded-lg">
+                <img src="https://res.cloudinary.com/dyaeb1ij4/image/upload/v1740644499/PHOTO-2024-03-16-20-57-33_3_ctrks6.jpg" alt="Certificate 9" class="w-full h-auto rounded shake">
+                <p class="mt-2">IoT MasterClass from Things Industries</p>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
